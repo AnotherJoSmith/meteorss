@@ -1,0 +1,1 @@
+Feedparser = Meteor.require("feedparser");
