@@ -10,18 +10,20 @@
         </div>
 
         <div class="panel-body">
+
+            <div id="error-message" class="panel-message"></div>
             <form role="form">
                 <div class="form-group">
-                    <label for="email">Email address</label>
-                    <input type="email" class="form-control" name="email" id="email" autofocus>
+                    <label class="control-label" for="email">Email address</label>
+                    <input type="text" class="form-control" name="email" id="email" autofocus>
                 </div>
                 <div class="form-group">
-                    <label for="password">Create a password </label><small>(min. 8 characters)</small>
+                    <label class="control-label" for="password">Create a password <small>(min. 8 characters)</small></label>
                     <input type="password" class="form-control" name="password" id="password">
                 </div>
 
                 <div class="form-group">
-                    <label for="confirmPassword">Confirm your password</label>
+                    <label class="control-label" for="confirmPassword">Confirm your password</label>
                     <input type="password" class="form-control" name="confirmPassword" id="confirmPassword">
                 </div>
 
