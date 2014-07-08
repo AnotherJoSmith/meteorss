@@ -12,7 +12,7 @@ Template.login.events({
 
 function loginCallback(error){
   if(error){
-    console.log("Nice try");
+    console.log("Invalid email or password. Please try again!"); //Place error message
   }
   else {
     Router.go("/feeds");

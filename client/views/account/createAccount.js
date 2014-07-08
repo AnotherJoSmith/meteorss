@@ -7,14 +7,30 @@ Template.createAccount.events({
       Accounts.createUser({
         email: $(evt.target).find("[name=email]").val(),
         password: password
-      }, Router.go("/feeds"));
-    }
-    else{
-      console.log("Passwords don't match or password not valid");
+      }, createAccountCallback);
     }
   }
 });
 
+function createAccountCallback(error){
+  if(error){
+    console.log(error.reason);
+  }
+  else {
+    Router.go("/feeds");
+  }
+}
+
 function validatePassword(password, confirmPassword){
-  return (password.length >= 8 && password === confirmPassword);
+  if(password.length < 8){
+    console.log("Password length too short. Must be 8 characters or longer");
+    return false;
+  }
+  else if(password !== confirmPassword){
+    console.log("Passwords don't match.");
+    return false;
+  }
+  else {
+    return true;
+  }
 }
