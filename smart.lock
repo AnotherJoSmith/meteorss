@@ -4,7 +4,8 @@
     "basePackages": {
       "bootstrap-3": {},
       "npm": {},
-      "iron-router": {}
+      "iron-router": {},
+      "feedparser": {}
     },
     "packages": {
       "bootstrap-3": {
@@ -21,6 +22,11 @@
         "git": "https://github.com/EventedMind/iron-router.git",
         "tag": "v0.7.1",
         "commit": "d1ffb3f06ea4c112132b030f2eb1a70b81675ecb"
+      },
+      "feedparser": {
+        "git": "https://github.com/DBeath/meteor-feedparser.git",
+        "tag": "v0.16.6",
+        "commit": "53c121f56949b6fe022dc8640087e1ad739db7d9"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",

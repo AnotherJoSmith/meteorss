@@ -1,19 +1,15 @@
 #title-logo{
-    font-size: 128px;
+    font-size: 72px;
     color: #888888;
-    position: fixed;
-    top: 5%;
-    margin: auto;
-    width: 100%;
-    height: 100%;
 }
 
 .center-page{
-    margin: auto;
-    position: absolute;
-    top: 0; left: 0; bottom: 0; right: 0;
+    margin-left: auto;
+    margin-right: auto;
     height: 300px;
     width: 350px;
+    position: relative;
+    top: 150px;
 }
 
 .back-arrow{
@@ -22,7 +18,7 @@
     float: left;
 }
 .back-arrow:hover{
-    color: #cccccc;
+    color: #777777;
 }
 
 .panel-message{
