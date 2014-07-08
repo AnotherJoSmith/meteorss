@@ -1,3 +1,4 @@
+/* Top buttons */
 .top-buttons {
   margin: 0 auto;
   display: table;
@@ -5,6 +6,12 @@
   margin-bottom: 10px;
 }
 
+.top-buttons button {
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+/* Footer */
 .sidebar-foot {
   position: absolute;
   bottom: 10px;
@@ -17,11 +24,15 @@
   display: inline-block;
 }
 
-.top-buttons button {
-  margin-right: 5px;
-  margin-left: 5px;
+.sidebar-foot hr{
+    border-color: #888888;
 }
 
+#rss-logo {
+    padding-bottom: 2px;
+}
+
+/* Nav (Middle) */
 .sidebar-nav {
   width: 250px;
   list-style: none;
@@ -29,29 +40,37 @@
   padding: 0;
 }
 
-.sidebar-nav li {
-  line-height: 40px;
-  text-indent: 20px;
-  font-size: 16px;
+.sidebar-nav a{
+    display: block;
+    padding: 4px 20px;
+    font-size: 16px;
+    text-decoration: none;
 }
 
-.sidebar-nav li a {
-  color: #0e100c;
-  display: block;
-  text-decoration: none;
+.sidebar-nav a:not(.bg-primary){
+    color: #333333;
 }
 
-.sidebar-nav li a:hover {
-  color: #fff;
-  background: rgba(255,255,255,0.2);
-  text-decoration: none;
+.sidebar-nav a:not(.bg-primary):hover{
+    background-color: #eeeeee;
+    color: #333333;
 }
 
-.sidebar-nav li a:active,
-.sidebar-nav li a:focus {
-  text-decoration: none;
+.sidebar-nav a:not(.bg-primary):active{
+    background-color: #aaaaaa;
+    color: #333333;
 }
 
+.sidebar-nav .bg-primary:hover,.sidebar-nav .bg-primary:active {
+    color: #fff;
+    background-color: #428bca;
+}
+
+.glyph-pad{
+    padding-right: 8px;
+}
+
+/* Nav > Brand*/
 .sidebar-nav > .sidebar-brand {
   height: 65px;
   line-height: 60px;
@@ -65,8 +84,4 @@
 .sidebar-nav > .sidebar-brand a:hover {
   color: #fff;
   background: none;
-}
-
-#rss-logo {
-  padding-bottom: 2px; 
 }
