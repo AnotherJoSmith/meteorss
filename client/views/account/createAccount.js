@@ -22,7 +22,7 @@ function validate(email, password, confirmPassword){
     var regex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
     // Check the email
-    if(email == ""){
+    if(email === ""){
         emailDiv.className += " has-error";
         errorMsgDiv.innerHTML += "&bull; Please enter your email address.<br>";
         valid = false;
@@ -33,7 +33,7 @@ function validate(email, password, confirmPassword){
     }
 
     // Check the password
-    if(password == ""){
+    if(password === ""){
         passwordDiv.className += " has-error";
         errorMsgDiv.innerHTML += "&bull; Please enter a password.<br>";
         valid = false;
@@ -44,7 +44,7 @@ function validate(email, password, confirmPassword){
     }
 
     // Check the password confirmation
-    if(confirmPassword == ""){
+    if(confirmPassword === ""){
         confirmDiv.className += " has-error";
         errorMsgDiv.innerHTML += "&bull; Please enter the password confirmation.";
         valid = false;
