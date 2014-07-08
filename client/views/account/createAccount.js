@@ -13,7 +13,7 @@ Template.createAccount.events({
       console.log("Passwords don't match or password not valid");
     }
   }
-})
+});
 
 function validatePassword(password, confirmPassword){
   return (password.length >= 8 && password === confirmPassword);
