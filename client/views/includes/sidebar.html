@@ -1,8 +1,12 @@
 <template name="sidebar">
   <div id="sidebar-wrapper">
     <div class="top-buttons">
-      <button class="btn btn-primary"><span class="glyphicon glyphicon-refresh"></span>&nbsp;Sync</button>
-      <button class="btn btn-success"><span class="glyphicon glyphicon-plus-sign"></span>&nbsp;Add</button>
+      <button class="btn btn-primary" id="sync-feeds">
+        <span class="glyphicon glyphicon-refresh"></span>&nbsp;Sync
+      </button>
+      <button class="btn btn-success" id="add-feed" data-toggle="modal" data-target="#add-feed-modal">
+        <span class="glyphicon glyphicon-plus-sign"></span>&nbsp;Add
+      </button>
     </div>
 
     <ul class="sidebar-nav">
