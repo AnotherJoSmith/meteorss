@@ -1,0 +1,27 @@
+<template name="addFeed">
+  <div class="modal fade" id="add-feed-modal" tabindex="-1" role="dialog" aria-labelledby="add-feed-label" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+          <h4 class="modal-title" id="add-feed-label">Add a new feed</h4>
+        </div>
+        <form class="form-horizontal" role="form">
+          <div class="modal-body">
+            <div class="form-group">
+              <label for="feed" class="col-sm-3 control-label">RSS feed URL:</label>
+              <div class="col-sm-9">
+                <input type="url" class="form-control" name="feed" id="feed"
+                placeholder="www.mysite.com/rss.xml" autofocus tabindex="1">
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button class="btn btn-success" type="submit">Add Feed</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</template>
