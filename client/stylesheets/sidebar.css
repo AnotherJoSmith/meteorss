@@ -40,16 +40,10 @@
   padding: 0;
 }
 
-.sidebar-nav li {
-  /*line-height: 40px;*/
-  /*text-indent: 20px;*/
-  font-size: 16px;
-}
-
-
 .sidebar-nav a{
-    padding: 4px 20px;
     display: block;
+    padding: 4px 20px;
+    font-size: 16px;
     text-decoration: none;
 }
 
