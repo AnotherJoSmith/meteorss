@@ -1,3 +1,10 @@
 <template name="layout">
-  {{> yield}}
+  <div id="wrapper">
+    {{> sidebar}}
+    <div id="page-content-wrapper">
+      <div class="page-content inset">
+        {{> yield}}
+      </div>
+    </div>
+  </div>
 </template>
