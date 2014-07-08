@@ -7,12 +7,16 @@
   margin-left: -250px;
   left: 250px;
   width: 250px;
-  background: #e1e1e1;
+  background: #dddddd;
   position: fixed;
   height: 100%;
   overflow-y: auto;
   z-index: 1000;
   transition: all 0.4s ease 0s;
+
+  -webkit-user-select: none; /* Webkit */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* IE 10  */
 }
 
 #page-content-wrapper {
