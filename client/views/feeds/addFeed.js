@@ -6,6 +6,9 @@ Template.addFeed.events({
       if(error){
         console.log(error.reason);
       }
+      else {
+        $("#add-feed-modal").modal("hide");
+      }
     });
   }
 });
