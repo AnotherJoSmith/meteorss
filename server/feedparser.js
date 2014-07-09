@@ -3,17 +3,18 @@ var request = Npm.require('request'),
 	fs = Npm.require('fs'),
 	Fiber = Npm.require('fibers');
 
-function done(err, result){
-    if(err){
-        console.log(err);
-    } else if(result) {
-        console.log(result);
-    };
-};
+function done(error, result){
+	if(error){
+		console.log(error);
+	}
+	else {
+		console.log(result);
+	}
+}
 
 // Adds a new feed.
 function addFeed(url, userId, done){
-	if( !(Feeds.findOne({url: url, userId: userId})) ){
+	if(!(Feeds.findOne({url: url, userId: userId})) ){
 		request(url)
 			.pipe(new Feedparser([]))
 			.on('meta', function(meta){
@@ -92,6 +93,13 @@ function readFeed(feed){
 	};
 };
 
+//Updates all of the current user's feeds
+function updateAllFeeds(){
+	Feeds.find({userId: Meteor.userId()}).forEach(function(feed){
+		readFeed(feed);
+	});
+}
+
 // Removes all articles.
 function removeAllArticles(){
 	Articles.remove({}, function(){
@@ -163,6 +171,10 @@ Meteor.methods({
 
 	refreshFeed: function(feed){
 		return readFeed(feed);
+	},
+
+	refreshFeeds: function(){
+		return updateAllFeeds();
 	},
 
 	markAllRead: function(feed){

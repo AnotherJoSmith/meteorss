@@ -1,1 +1,1 @@
-Articles = new Meteor.Collection("article");
+Articles = new Meteor.Collection("articles");
