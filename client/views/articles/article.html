@@ -1,16 +1,14 @@
 <template name="article">
-  <div class="article">
-    <div class="title">
-      <span>
-        <h3><a href="{{link}}" target="_blank">{{title}}</a></h3>
-        <h6>{{pubdate}}</h6>
-      </span>
-    </div>
-    <div class="content">
-      {{#if image.url}}
-      <img src="{{image.url}}"/>
-      {{/if}}
-      <p>{{{content}}}</p>
-    </div>
+  <div class="title">
+    <span>
+      <h3><a href="{{link}}" target="_blank">{{title}}</a></h3>
+      <h6>{{pubdate}}</h6>
+    </span>
+  </div>
+  <div class="content">
+    {{#if image.url}}
+    <img src="{{image.url}}"/>
+    {{/if}}
+    <p>{{{content}}}</p>
   </div>
 </template>
