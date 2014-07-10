@@ -1,5 +1,5 @@
 Template.articlesList.helpers({
   articles: function(){
-    return Articles.find({});
+    return Articles.find({}, {sort: {pubdate: -1}, limit: 50});
   }
 });
