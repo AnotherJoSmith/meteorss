@@ -1,30 +1,37 @@
 <template name="sidebar">
-  <div id="sidebar-wrapper">
-    <div class="top-buttons">
-      <button class="btn btn-primary" id="sync-feeds">
-        <span class="glyphicon glyphicon-refresh"></span>&nbsp;Sync
-      </button>
-      <button class="btn btn-success" id="add-feed" data-toggle="modal" data-target="#add-feed-modal">
-        <span class="glyphicon glyphicon-plus-sign"></span>&nbsp;Add
-      </button>
-    </div>
+    <div id="sidebar-wrapper">
+        <div class="top-buttons">
+            <button class="btn btn-primary" id="sync-feeds">
+                <span class="glyphicon glyphicon-refresh"></span>&nbsp;Sync
+            </button>
+            <button class="btn btn-success" id="add-feed" data-toggle="modal" data-target="#add-feed-modal">
+                <span class="glyphicon glyphicon-plus-sign"></span>&nbsp;Add
+            </button>
+        </div>
 
-    <ul class="sidebar-nav">
-        <li><a href="#" class="bg-primary"><span class="glyphicon glyph-pad glyphicon-inbox"></span>Inbox</a></li>
-        <li><a href="#"><span class="glyphicon glyph-pad glyphicon-user"></span>Shared With You</a></li>
-        <li><a href="#"><span class="glyphicon glyph-pad glyphicon-folder-close"></span>Folder</a></li>
-        <li><a href="#"><span class="glyphicon glyph-pad glyphicon-folder-close"></span>Folder</a></li>
-        <li><a href="#"><span class="glyphicon glyph-pad glyphicon-folder-close"></span>Folder</a></li>
-        <li><a href="#"><span class="glyphicon glyph-pad glyphicon-folder-close"></span>Folder</a></li>
-        <li><a href="#"><span class="glyphicon glyph-pad glyphicon-folder-open"></span>Folder</a></li>
-        <li><a href="#"><span class="glyphicon glyph-pad glyphicon-folder-close"></span>Folder</a></li>
-        <li><a href="#"><span class="glyphicon glyph-pad glyphicon-folder-close"></span>Folder</a></li>
-    </ul>
-    <div class="sidebar-foot">
-      <hr>
-      <button class="btn btn-primary btn-block"><img src="/images/rss-16.png" id="rss-logo" class="glyph-pad">Manage Feeds</button>
-      <button class="btn btn-primary btn-block"><span class="glyphicon glyph-pad glyphicon-folder-close"></span>Manage Folders</button>
-      <button class="btn btn-primary btn-block"><span class="glyphicon glyph-pad glyphicon-cog"></span>Account &amp; Friends</button>
+
+        <ul class="sidebar-nav">
+            <li><a href="#" class="bg-primary"><span class="glyphicon glyph-pad glyphicon-inbox"></span>Inbox</a></li>
+            <li><a href="#"><span class="glyphicon glyph-pad glyphicon-user"></span>Shared With You</a></li>
+        </ul>
+        <div class="separator"></div>
+        <div class="sidebar-overflow">
+            <ul class="sidebar-nav">
+                <li><a href="#" onclick="changeFolder(this)"><span class="glyphicon glyph-pad glyphicon-folder-close"></span>Folder</a></li>
+                <li><a href="#"><span class="glyphicon glyph-pad glyphicon-folder-close"></span>Folder</a></li>
+                <li><a href="#"><span class="glyphicon glyph-pad glyphicon-folder-close"></span>Folder</a></li>
+                <li><a href="#"><span class="glyphicon glyph-pad glyphicon-folder-close"></span>Folder</a></li>
+                <li><a href="#"><span class="glyphicon glyph-pad glyphicon-folder-open"></span>Folder</a></li>
+                <li><a href="#"><span class="glyphicon glyph-pad glyphicon-folder-close"></span>Folder</a></li>
+                <li><a href="#"><span class="glyphicon glyph-pad glyphicon-folder-close"></span>Folder</a></li>
+                <li><a href="#"><span class="glyphicon glyph-pad glyphicon-folder-close"></span>Folder</a></li>
+            </ul>
+        </div>
+        <div class="separator"></div>
+        <div class="sidebar-foot">
+            <button class="btn btn-primary btn-block"><img src="/images/rss-16.png" id="rss-logo" class="glyph-pad">Manage Feeds</button>
+            <button class="btn btn-primary btn-block"><span class="glyphicon glyph-pad glyphicon-folder-close"></span>Manage Folders</button>
+            <button class="btn btn-primary btn-block"><span class="glyphicon glyph-pad glyphicon-cog"></span>Account &amp; Friends</button>
+        </div>
     </div>
-  </div>
 </template>

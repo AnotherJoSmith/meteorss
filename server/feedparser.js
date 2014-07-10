@@ -66,7 +66,7 @@ function addArticle(article, feed, done){
 			comments: article.comments,
 			image: article.image,
 			categories: article.categories,
-			source: article.source,
+			source: article.source
 		});
 		Feeds.update(feed._id, {$inc: {unread: 1}});
 	}).run();
