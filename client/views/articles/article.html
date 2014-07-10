@@ -7,7 +7,9 @@
       </span>
     </div>
     <div class="content">
+      {{#if image.url}}
       <img src="{{image.url}}"/>
+      {{/if}}
       <p>{{{content}}}</p>
     </div>
   </div>
