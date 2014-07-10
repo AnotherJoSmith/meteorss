@@ -11,27 +11,27 @@
 
 
         <ul class="sidebar-nav">
-            <li><a href="#" class="bg-primary"><span class="glyphicon glyph-pad glyphicon-inbox"></span>Inbox</a></li>
-            <li><a href="#"><span class="glyphicon glyph-pad glyphicon-user"></span>Shared With You</a></li>
+            <li><a onclick="Meteor.call('changeFolder', this.id)" id="Inbox" class="bg-primary selected"><span class="glyphicon glyph-pad glyphicon-inbox"></span>Inbox</a></li>
+            <li><a onclick="Meteor.call('changeFolder', this.id)" id="Shared"><span class="glyphicon glyph-pad glyphicon-user"></span>Shared With You</a></li>
         </ul>
         <div class="separator"></div>
         <div class="sidebar-overflow">
             <ul class="sidebar-nav">
-                <li><a href="#" onclick="changeFolder(this)"><span class="glyphicon glyph-pad glyphicon-folder-close"></span>Folder</a></li>
-                <li><a href="#"><span class="glyphicon glyph-pad glyphicon-folder-close"></span>Folder</a></li>
-                <li><a href="#"><span class="glyphicon glyph-pad glyphicon-folder-close"></span>Folder</a></li>
-                <li><a href="#"><span class="glyphicon glyph-pad glyphicon-folder-close"></span>Folder</a></li>
-                <li><a href="#"><span class="glyphicon glyph-pad glyphicon-folder-open"></span>Folder</a></li>
-                <li><a href="#"><span class="glyphicon glyph-pad glyphicon-folder-close"></span>Folder</a></li>
-                <li><a href="#"><span class="glyphicon glyph-pad glyphicon-folder-close"></span>Folder</a></li>
-                <li><a href="#"><span class="glyphicon glyph-pad glyphicon-folder-close"></span>Folder</a></li>
+                <li><a onclick="Meteor.call('changeFolder', this.id)" id="Science"><span class="glyphicon glyph-pad glyphicon-folder-close"></span>Science</a></li>
+                <li><a onclick="Meteor.call('changeFolder', this.id)" id="Travel"><span class="glyphicon glyph-pad glyphicon-folder-close"></span>Travel</a></li>
+                <li><a onclick="Meteor.call('changeFolder', this.id)" id="Photography"><span class="glyphicon glyph-pad glyphicon-folder-close"></span>Photography</a></li>
+                <li><a onclick="Meteor.call('changeFolder', this.id)" id="Nature"><span class="glyphicon glyph-pad glyphicon-folder-close"></span>Nature</a></li>
+                <li><a onclick="Meteor.call('changeFolder', this.id)" id="Technology"><span class="glyphicon glyph-pad glyphicon-folder-close"></span>Technology</a></li>
+                <li><a onclick="Meteor.call('changeFolder', this.id)" id="Fashion"><span class="glyphicon glyph-pad glyphicon-folder-close"></span>Fashion</a></li>
+                <li><a onclick="Meteor.call('changeFolder', this.id)" id="Finance"><span class="glyphicon glyph-pad glyphicon-folder-close"></span>Finance</a></li>
+                <li><a onclick="Meteor.call('changeFolder', this.id)" id="Business"><span class="glyphicon glyph-pad glyphicon-folder-close"></span>Business</a></li>
             </ul>
         </div>
         <div class="separator"></div>
         <div class="sidebar-foot">
-            <button class="btn btn-primary btn-block"><img src="/images/rss-16.png" id="rss-logo" class="glyph-pad">Manage Feeds</button>
-            <button class="btn btn-primary btn-block"><span class="glyphicon glyph-pad glyphicon-folder-close"></span>Manage Folders</button>
-            <button class="btn btn-primary btn-block"><span class="glyphicon glyph-pad glyphicon-cog"></span>Account &amp; Friends</button>
+            <button class="btn btn-default btn-block"><img src="/images/rss-16-b.png" id="rss-logo" class="glyph-pad">Manage Feeds</button>
+            <button class="btn btn-default btn-block"><span class="glyphicon glyph-pad glyphicon-folder-close"></span>Manage Folders</button>
+            <button class="btn btn-default btn-block"><span class="glyphicon glyph-pad glyphicon-cog"></span>Account &amp; Friends</button>
         </div>
     </div>
 </template>
