@@ -18,15 +18,21 @@ Meteor.methods({
         var active = document.getElementById(folder);
         var old =  document.getElementsByClassName("selected")[0];
 
-        if(old.id != "Inbox" && old.id != "Shared"){
-            old.firstChild.className = folderClose;
-        }
+        if(old.id != folder) {
 
-        if(folder != "Inbox" && folder != "Shared"){
-            active.firstChild.className = folderOpen;
-        }
+            if (old.id != "Inbox" && old.id != "Shared") {
+                old.firstChild.className = folderClose;
+                $(old).parent().children("ul").slideToggle();
+            }
 
-        document.getElementsByClassName("selected")[0].className = "";
-        active.className = "bg-primary selected";
+            if (folder != "Inbox" && folder != "Shared") {
+                active.firstChild.className = folderOpen;
+                $("#" + folder).parent().children("ul").slideToggle();
+            }
+
+            old.className = "";
+            active.className = "bg-primary selected";
+
+        }
     }
 });
