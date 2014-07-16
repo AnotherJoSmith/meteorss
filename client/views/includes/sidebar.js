@@ -10,29 +10,49 @@ Template.sidebar.events({
   }
 });
 
-var folderOpen = "glyphicon glyph-pad glyphicon-folder-open";
-var folderClose = "glyphicon glyph-pad glyphicon-folder-close";
+var activeFolder = $("#Inbox");
 
 Meteor.methods({
     changeFolder: function(folder) {
-        var active = document.getElementById(folder);
-        var old =  document.getElementsByClassName("selected")[0];
+        var active = $("#" + folder);
+        var old =  $(".selected");
 
-        if(old.id != folder) {
-
+        if(!activeFolder.is(active)) {
             if (old.id != "Inbox" && old.id != "Shared") {
-                old.firstChild.className = folderClose;
-                $(old).parent().children("ul").slideToggle();
+                closeFolder(activeFolder);
             }
 
             if (folder != "Inbox" && folder != "Shared") {
-                active.firstChild.className = folderOpen;
-                $("#" + folder).parent().children("ul").slideToggle();
+                openFolder(active);
             }
-
-            old.className = "";
-            active.className = "bg-primary selected";
-
         }
+
+        activeFolder = active;
+        console.log(activeFolder.attr("id"));
+        setActive(active);
+    },
+
+    selectFeed: function(feedClasses){
+        var feedName = feedClasses.replace("selected bg-primary", "");
+        var active = activeFolder.parent().find("." + feedName);
+        setActive(active);
     }
 });
+
+function closeFolder(folder){
+    folder.children(".glyphicon").removeClass("glyphicon-folder-open").addClass("glyphicon-folder-close");
+    folder.parent().children("ul").slideUp();
+}
+
+
+function openFolder(folder){
+    folder.children(".glyphicon").removeClass("glyphicon-folder-close").addClass("glyphicon-folder-open");
+    folder.parent().children("ul").slideDown();
+}
+
+function setActive(active){
+    if(!active.hasClass("selected")) {
+        $(".selected.bg-primary").removeClass("selected bg-primary");
+        active.addClass("selected bg-primary");
+    }
+}

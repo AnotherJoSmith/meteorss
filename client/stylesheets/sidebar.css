@@ -100,10 +100,6 @@
 }
 
 .sidebar-brand a{
-    padding-left: 60px;
+    padding-left: 55px;
     font-size: 13px;
-}
-
-.selected-feed{
-    background-color: #3B77AA;
 }
