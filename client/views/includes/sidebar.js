@@ -28,7 +28,6 @@ Meteor.methods({
         }
 
         activeFolder = active;
-        console.log(activeFolder.attr("id"));
         setActive(active);
     },
 

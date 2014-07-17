@@ -1,11 +1,15 @@
 <template name="article">
   <div class="title">
     <span>
-      <h3><a href="{{link}}" target="_blank">{{title}}</a></h3>
-      <h6>{{pubdate}}</h6>
+      <h3><a href="{{link}}" target="_blank" class="article-title">{{title}}</a></h3>
     </span>
   </div>
-  <div class="content">
+  <div class="content" id="{{guid}}">
+      <div class="article-info">
+          <span class="article-author">{{author}}</span>
+          <span class="article-date">- {{pubdate}}</span>
+      </div>
+
     {{#if image.url}}
     <img src="{{image.url}}"/>
     {{/if}}

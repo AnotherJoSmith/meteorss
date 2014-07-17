@@ -30,3 +30,39 @@
 .modal {
   margin-top: 15%
 }
+
+
+
+.content{
+    margin-bottom: 30px;
+    border: 1px solid #999999;
+    border-left: 5px solid #428bca;
+    border-radius: 3px;
+    padding: 5px;
+}
+
+.content:hover{
+    background-color: #eeeeee;
+    cursor: pointer;
+}
+
+.content:active{
+    background-color: #cccccc;
+}
+
+.article-info{
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.article-date{
+    color: #777777;
+}
+
+.article-author{
+    font-style: italic;
+}
+
+.read{
+    opacity: 0.4;
+}
