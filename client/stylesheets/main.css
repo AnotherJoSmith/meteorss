@@ -60,7 +60,6 @@
 
 #logout .inner{
   float: right;
-  background: #dddddd;
   padding: 5px;
   background-color:rgba(221,221,221,0.75);
   border: solid 1px #dddddd;
@@ -92,11 +91,30 @@
 .feed-list *{
     padding: 3px 5px;
     font-size: 14px;
+    overflow: scroll;
+}
+
+.feed-list > li:hover{
+    color: #428bca;
 }
 
 .feed-info{
     border-left: 1px solid #e5e5e5;
-    height: 400px;
+    height: 500px;
     top: -10px;
     overflow: scroll;
+}
+
+.remove-feed{
+    color: #d9534f;
+    font-size: 12px;
+    top: 4px;
+}
+
+.remove-feed:hover{
+    color: #a94442;
+}
+
+.remove-feed:active{
+    color: #602826;
 }
