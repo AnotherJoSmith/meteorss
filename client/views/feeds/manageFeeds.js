@@ -3,10 +3,26 @@ Template.manageFeeds.events({
         if(!$(evt.target).hasClass("glyphicon")) {
             selectFeed(evt.target);
         }
+        else if($(evt.target).hasClass("remove-feed")) {
+            removeFeed($(evt.target).parent());
+        } else{
+            undoFeed($(evt.target).parent());
+        }
     }
 });
 
 function selectFeed(feed){
     $(".feed-list").find(".bg-primary").removeClass("bg-primary");
     $(feed).addClass("bg-primary");
+}
+
+function removeFeed(feedItem){
+    feedItem.children().eq(1).wrap("<del>").fadeTo("slow", 0.5);
+    feedItem.children().eq(0).removeClass("glyphicon-minus-sign remove-feed").addClass("glyphicon-plus-sign undo-remove-feed");
+}
+
+function undoFeed(feedItem){
+    feedItem.find("del").contents().unwrap();
+    feedItem.children().eq(1).fadeTo("slow", 1);
+    feedItem.children().eq(0).removeClass("glyphicon-plus-sign undo-remove-feed").addClass("glyphicon-minus-sign remove-feed");
 }

@@ -122,3 +122,18 @@
 .remove-feed:active{
     color: #602826;
 }
+
+.undo-remove-feed{
+    color: #62c462;
+    font-size: 12px;
+    top: 4px;
+    overflow: hidden;
+}
+
+.undo-remove-feed:hover{
+    color: #51a351;
+}
+
+.undo-remove-feed:active{
+    color: #2e5d2e;
+}
