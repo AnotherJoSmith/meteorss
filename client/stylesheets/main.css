@@ -66,3 +66,29 @@
 .read{
     opacity: 0.4;
 }
+
+/*Logout*/
+#logout {
+  float: right;
+  width: 500px;
+}
+
+#logout .inner{
+  float: right;
+  background: #dddddd;
+  padding: 5px;
+  background-color:rgba(221,221,221,0.5);
+  border: solid 1px #dddddd;
+}
+
+#logout .inner span{
+  display: inline-block;
+  float: left;
+  padding-top: 8px;
+  padding-right: 10px;
+}
+
+#logout .inner form{
+  display: inline-block;
+  float: right;
+}

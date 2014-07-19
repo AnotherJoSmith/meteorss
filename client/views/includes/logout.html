@@ -1,5 +1,12 @@
 <template name="logout">
-  <form role="form">
-    <button type="submit" class="btn btn-danger">Sign Out</button>
-  </form>
+  <div id="logout">
+    <div class="inner">
+      {{#if currentUser}}
+        <span>{{userEmail}}</span>
+      {{/if}}
+      <form role="form">
+        <button type="submit" class="btn btn-danger">Sign Out</button>
+      </form>
+    </div>
+  </div>
 </template>
