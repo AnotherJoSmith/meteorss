@@ -3,6 +3,8 @@ var request = Npm.require('request'),
 	fs = Npm.require('fs'),
 	Fiber = Npm.require('fibers');
 
+var MAX_OLD_ARTICLES = 5;
+
 function done(error, result){
 	if(error){
 		console.log(error);
@@ -96,9 +98,19 @@ function readFeed(feed){
 //Updates all of the current user's feeds
 function updateAllFeeds(){
 	Feeds.find({userId: Meteor.userId()}).forEach(function(feed){
+		removeStaleArticles(feed);
 		readFeed(feed);
 	});
 }
+
+function removeStaleArticles(feed){
+	var articles = Articles.find({feedId: feed._id}, {sort: {pubdate: -1}});
+	if(articles.count() > MAX_OLD_ARTICLES){
+	_.each(_.rest(articles.fetch(), MAX_OLD_ARTICLES), function(element){
+			Articles.remove(element._id);
+		});
+	}
+};
 
 // Removes all articles.
 function removeAllArticles(){
