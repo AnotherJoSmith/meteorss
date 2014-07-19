@@ -27,10 +27,6 @@
   padding: 20px;
 }
 
-.modal {
-  margin-top: 15%
-}
-
 .content{
     margin-bottom: 30px;
     border: 1px solid #999999;
@@ -85,4 +81,22 @@
 
 #feeds {
   padding-top: 6px;
+}
+
+/* Manage Feeds Modal */
+.feed-list{
+    list-style: none;
+    margin-left: -40px;
+}
+
+.feed-list *{
+    padding: 3px 5px;
+    font-size: 14px;
+}
+
+.feed-info{
+    border-left: 1px solid #e5e5e5;
+    height: 400px;
+    top: -10px;
+    overflow: scroll;
 }
