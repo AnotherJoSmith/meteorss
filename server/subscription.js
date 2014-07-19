@@ -23,3 +23,8 @@ Feeds.allow({
 		return doc.userId == userId;
 	}
 });
+
+Accounts.onLogin(function(){
+	console.log("NSYNC");
+	Meteor.call("refreshFeeds");
+});
