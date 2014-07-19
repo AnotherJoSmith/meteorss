@@ -25,6 +25,5 @@ Feeds.allow({
 });
 
 Accounts.onLogin(function(){
-	console.log("NSYNC");
 	Meteor.call("refreshFeeds");
 });
