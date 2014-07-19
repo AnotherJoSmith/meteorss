@@ -1,10 +1,3 @@
-Template.logout.events({
-  "submit form": function(evt){
-    evt.preventDefault();
-    Meteor.logout(logoutCallback);
-  }
-});
-
 Template.logout.helpers({
   userEmail: function(){
     return Meteor.user().emails[0].address;
