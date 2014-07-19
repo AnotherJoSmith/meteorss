@@ -44,7 +44,8 @@
 
 /* Nav (Middle) */
 .sidebar-overflow{
-    overflow: scroll;
+    overflow-y: auto;
+    overflow-x: hidden;
     height: calc(100% - 255px);
 }
 
