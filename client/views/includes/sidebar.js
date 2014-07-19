@@ -7,36 +7,41 @@ Template.sidebar.events({
         console.log(error);
       }
     });
+  },
+
+  "click .sidebar-brand > li > a": function(evt){
+    selectFeed(evt.target.className);
+  },
+
+  "click .sidebar-nav > li > a": function(evt){
+    changeFolder(evt.target.id);
   }
 });
 
-var activeFolder = $("#Inbox");
+activeFolder = $("#Inbox");
 
-Meteor.methods({
-    changeFolder: function(folder) {
-        var active = $("#" + folder);
-        var old =  $(".selected");
+function selectFeed(feedClasses){
+    var feedName = feedClasses.replace("selected bg-primary", "");
+    var active = activeFolder.parent().find("." + feedName);
+    setActive(active);
+}
 
-        if(!activeFolder.is(active)) {
-            if (old.id != "Inbox" && old.id != "Shared") {
-                closeFolder(activeFolder);
-            }
+function changeFolder(folder){
+  var active = $("#" + folder);
+  var old =  $(".selected").attr("id");
 
-            if (folder != "Inbox" && folder != "Shared") {
-                openFolder(active);
-            }
-        }
+  if(!activeFolder.is(active)) {
+      if (old != "Inbox" && old != "Shared") {
+          closeFolder(activeFolder);
+      }
+      if (folder != "Inbox" && folder != "Shared") {
+          openFolder(active);
+      }
+  }
 
-        activeFolder = active;
-        setActive(active);
-    },
-
-    selectFeed: function(feedClasses){
-        var feedName = feedClasses.replace("selected bg-primary", "");
-        var active = activeFolder.parent().find("." + feedName);
-        setActive(active);
-    }
-});
+  activeFolder = active;
+  setActive(active);
+}
 
 function closeFolder(folder){
     folder.children(".glyphicon").removeClass("glyphicon-folder-open").addClass("glyphicon-folder-close");

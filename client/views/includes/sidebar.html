@@ -9,46 +9,45 @@
             </button>
         </div>
 
-
         <ul class="sidebar-nav">
-            <li><a onclick="Meteor.call('changeFolder', this.id)" id="Inbox" class="bg-primary selected"><span class="glyphicon glyph-pad glyphicon-inbox"></span>Inbox</a></li>
-            <li><a onclick="Meteor.call('changeFolder', this.id)" id="Shared"><span class="glyphicon glyph-pad glyphicon-user"></span>Shared With You</a></li>
+            <li><a id="Inbox" class="bg-primary selected"><span class="glyphicon glyph-pad glyphicon-inbox"></span>Inbox</a></li>
+            <li><a id="Shared"><span class="glyphicon glyph-pad glyphicon-user"></span>Shared With You</a></li>
         </ul>
         <div class="separator"></div>
         <div class="sidebar-overflow">
             <ul class="sidebar-nav">
-                <li><a onclick="Meteor.call('changeFolder', this.id)" id="Science"><span class="glyphicon glyph-pad glyphicon-folder-close"></span>Science</a>
+                <li><a id="Science"><span class="glyphicon glyph-pad glyphicon-folder-close"></span>Science</a>
                 <ul class="sidebar-brand">
-                    <li><a onclick="Meteor.call('selectFeed', this.className)" class="Engadget">Engadget</a></li>
-                    <li><a onclick="Meteor.call('selectFeed', this.className)" class="TheVerge">TheVerge</a></li>
-                    <li><a onclick="Meteor.call('selectFeed', this.className)" class="Cnet">Cnet</a></li>
-                    <li><a onclick="Meteor.call('selectFeed', this.className)" class="GameInformer">GameInformer</a></li>
+                    <li><a class="Engadget">Engadget</a></li>
+                    <li><a class="TheVerge">TheVerge</a></li>
+                    <li><a class="Cnet">Cnet</a></li>
+                    <li><a class="GameInformer">GameInformer</a></li>
                 </ul>
                 </li>
-                <li><a onclick="Meteor.call('changeFolder', this.id)" id="Travel"><span class="glyphicon glyph-pad glyphicon-folder-close"></span>Travel</a>
-                <ul class="sidebar-brand"><li><a onclick="Meteor.call('selectFeed', this.className)" class="Test">Test</a></li></ul>
+                <li><a id="Travel"><span class="glyphicon glyph-pad glyphicon-folder-close"></span>Travel</a>
+                <ul class="sidebar-brand"><li><a class="Test">Test</a></li></ul>
                 </li>
-                <li><a onclick="Meteor.call('changeFolder', this.id)" id="Photography"><span class="glyphicon glyph-pad glyphicon-folder-close"></span>Photography</a>
+                <li><a id="Photography"><span class="glyphicon glyph-pad glyphicon-folder-close"></span>Photography</a>
                     <ul class="sidebar-brand"></ul>
                 </li>
-                <li><a onclick="Meteor.call('changeFolder', this.id)" id="Nature"><span class="glyphicon glyph-pad glyphicon-folder-close"></span>Nature</a>
+                <li><a id="Nature"><span class="glyphicon glyph-pad glyphicon-folder-close"></span>Nature</a>
                     <ul class="sidebar-brand"></ul>
                 </li>
-                <li><a onclick="Meteor.call('changeFolder', this.id)" id="Technology"><span class="glyphicon glyph-pad glyphicon-folder-close"></span>Technology</a>
+                <li><a id="Technology"><span class="glyphicon glyph-pad glyphicon-folder-close"></span>Technology</a>
                     <ul class="sidebar-brand">
-                        <li><a onclick="Meteor.call('selectFeed', this.className)" class="Engadget">Engadget</a></li>
-                        <li><a onclick="Meteor.call('selectFeed', this.className)" class="TheVerge">TheVerge</a></li>
-                        <li><a onclick="Meteor.call('selectFeed', this.className)" class="Cnet">Cnet</a></li>
-                        <li><a onclick="Meteor.call('selectFeed', this.className)" class="GameInformer">GameInformer</a></li>
+                        <li><a class="Engadget">Engadget</a></li>
+                        <li><a class="TheVerge">TheVerge</a></li>
+                        <li><a class="Cnet">Cnet</a></li>
+                        <li><a class="GameInformer">GameInformer</a></li>
                     </ul>
                 </li>
-                <li><a onclick="Meteor.call('changeFolder', this.id)" id="Fashion"><span class="glyphicon glyph-pad glyphicon-folder-close"></span>Fashion</a>
+                <li><a id="Fashion"><span class="glyphicon glyph-pad glyphicon-folder-close"></span>Fashion</a>
                     <ul class="sidebar-brand"></ul>
                 </li>
-                <li><a onclick="Meteor.call('changeFolder', this.id)" id="Finance"><span class="glyphicon glyph-pad glyphicon-folder-close"></span>Finance</a>
+                <li><a id="Finance"><span class="glyphicon glyph-pad glyphicon-folder-close"></span>Finance</a>
                     <ul class="sidebar-brand"></ul>
                 </li>
-                <li><a onclick="Meteor.call('changeFolder', this.id)" id="Business"><span class="glyphicon glyph-pad glyphicon-folder-close"></span>Business</a>
+                <li><a id="Business"><span class="glyphicon glyph-pad glyphicon-folder-close"></span>Business</a>
                     <ul class="sidebar-brand"></ul>
                 </li>
             </ul>
