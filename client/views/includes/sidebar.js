@@ -21,9 +21,9 @@ Template.sidebar.events({
 activeFolder = $("#Inbox");
 
 function selectFeed(feedClasses){
-    var feedName = feedClasses.replace("selected bg-primary", "");
-    var active = activeFolder.parent().find("." + feedName);
-    setActive(active);
+  var feedName = feedClasses.replace("selected bg-primary", "");
+  var active = activeFolder.parent().find("." + feedName);
+  setActive(active);
 }
 
 function changeFolder(folder){
@@ -31,12 +31,12 @@ function changeFolder(folder){
   var old =  $(".selected").attr("id");
 
   if(!activeFolder.is(active)) {
-      if (old != "Inbox" && old != "Shared") {
-          closeFolder(activeFolder);
-      }
-      if (folder != "Inbox" && folder != "Shared") {
-          openFolder(active);
-      }
+    if (old != "Inbox" && old != "Shared") {
+      closeFolder(activeFolder);
+    }
+    if (folder != "Inbox" && folder != "Shared") {
+      openFolder(active);
+    }
   }
 
   activeFolder = active;
@@ -44,19 +44,19 @@ function changeFolder(folder){
 }
 
 function closeFolder(folder){
-    folder.children(".glyphicon").removeClass("glyphicon-folder-open").addClass("glyphicon-folder-close");
-    folder.parent().children("ul").slideUp();
+  folder.children(".glyphicon").removeClass("glyphicon-folder-open").addClass("glyphicon-folder-close");
+  folder.parent().children("ul").slideUp();
 }
 
 
 function openFolder(folder){
-    folder.children(".glyphicon").removeClass("glyphicon-folder-close").addClass("glyphicon-folder-open");
-    folder.parent().children("ul").slideDown();
+  folder.children(".glyphicon").removeClass("glyphicon-folder-close").addClass("glyphicon-folder-open");
+  folder.parent().children("ul").slideDown();
 }
 
 function setActive(active){
-    if(!active.hasClass("selected")) {
-        $(".selected.bg-primary").removeClass("selected bg-primary");
-        active.addClass("selected bg-primary");
-    }
+  if(!active.hasClass("selected")) {
+    $(".selected.bg-primary").removeClass("selected bg-primary");
+    active.addClass("selected bg-primary");
+  }
 }
