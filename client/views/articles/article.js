@@ -8,5 +8,9 @@ Template.article.helpers({
       a.href = this.link;
     }
 		return a.hostname;
+  },
+
+  localDate: function(){
+    return this.pubdate.toLocaleString();
   }
 });
