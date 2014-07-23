@@ -11,7 +11,10 @@ Template.createAccount.events({
         if(validate(email, password, confirmPassword)){
             Accounts.createUser({
                 email: email,
-                password: password
+                password: password,
+                profile: {
+                  tutorial: true
+                }
             }, createAccountCallback);
         }
     }

@@ -4,7 +4,7 @@
       {{#if currentUser}}
         <span>{{userEmail}}</span>
       {{/if}}
-      <form role="form" onsubmit="Meteor.logout()">
+      <form role="form" onsubmit="Meteor.logout(function(){Router.go('/');});">
         <button type="submit" class="btn btn-danger">Sign Out</button>
       </form>
     </div>
