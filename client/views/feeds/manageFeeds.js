@@ -17,12 +17,11 @@ function selectFeed(feed){
 }
 
 function removeFeed(feedItem){
-    feedItem.children().eq(1).wrap("<del>").fadeTo("slow", 0.5);
+    feedItem.children().eq(1).addClass("strike-item").fadeTo("fast", 0.5);
     feedItem.children().eq(0).removeClass("glyphicon-minus-sign remove-feed").addClass("glyphicon-plus-sign undo-remove-feed");
 }
 
 function undoFeed(feedItem){
-    feedItem.find("del").contents().unwrap();
-    feedItem.children().eq(1).fadeTo("slow", 1);
+    feedItem.children().eq(1).removeClass("strike-item").fadeTo("fast", 1);
     feedItem.children().eq(0).removeClass("glyphicon-plus-sign undo-remove-feed").addClass("glyphicon-minus-sign remove-feed");
 }

@@ -84,6 +84,10 @@
 
 /* Manage Feeds Modal */
 .feed-list{
+    -webkit-user-select: none; /* Webkit */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none;     /* IE 10  */
+
     list-style: none;
     margin-left: -40px;
     overflow-y: auto;
@@ -136,4 +140,8 @@
 
 .undo-remove-feed:active{
     color: #2e5d2e;
+}
+
+.strike-item{
+    text-decoration: line-through;
 }
