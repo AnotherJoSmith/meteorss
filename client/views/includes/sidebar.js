@@ -86,10 +86,6 @@ function changeFolder(folder){
       openFolder(active);
     }
   }
-  else {
-    closeFolder(activeFolder);
-    active = $("#Inbox");
-  }
 
   activeFolder = active;
   setActive(active);
